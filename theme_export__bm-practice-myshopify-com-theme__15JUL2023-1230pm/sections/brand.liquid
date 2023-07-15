@@ -1,0 +1,37 @@
+<section class="brands">
+      <div class="container">
+        <!-- Brands Slider-->
+        <div class="owl-carousel owl-theme brands-slider">
+          <!-- item-->
+          
+           {% for block in section.blocks %}
+            
+            <div class="item d-flex align-items-center justify-content-center">
+              <div class="brand d-flex align-items-center"><img src="{{block.settings.logo | img_url: '2048x'}}" alt="..." class="img-fluid"></div>
+            </div>
+          {% endfor %}
+
+        </div>
+      </div>
+    </section>
+
+
+     {% schema %}
+    {
+      "name": "Brands",
+      "blocks":[
+        {
+          "type": "text",
+          "name": "Brands",
+          "settings":[
+            {
+              "id": "logo",
+              "type": "image_picker",
+              "label": "Brand Logo"
+            }
+          ]
+        }
+      ]
+    }
+
+    {% endschema %}

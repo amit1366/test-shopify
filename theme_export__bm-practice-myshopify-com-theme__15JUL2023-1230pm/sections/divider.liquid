@@ -1,0 +1,48 @@
+<section style="background: url({{section.settings.bg_image | img_url:  '2048x'}});" class="divider">
+      <div class="container"> 
+        <div class="row">
+          <div class="col-lg-6">
+            <p> {{section.settings.top_text}} </p>
+            <h2 class="h1 text-uppercase no-margin"> {{section.settings.heading_text}} </h2>
+            <p>{{section.settings.bottom_text}}</p>
+            <a href="#" class="btn btn-template wide shop-now"> {{section.settings.btn_text}} <i class="icon-bag"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    {% schema %}
+      
+      {
+        "name": "divider",
+        "settings":[
+          {
+            "id": "bg_image",
+            "type": "image_picker",
+            "label": "Background Image"
+          },
+          {
+            "id": "top_text",
+            "type": "text",
+            "label": "Top Text"
+          },
+          {
+            "id": "heading_text",
+            "type": "text",
+            "label": "Heading Text"
+          },
+          {
+            "id": "bottom_text",
+            "type": "text",
+            "label": "Bottom Text"
+          },
+          {
+            "id": "btn_text",
+            "type": "text",
+            "label": "Button Text"
+          }
+        ]
+      }
+
+    {% endschema %}
